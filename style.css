@@ -1,5 +1,12 @@
-#nav-bar{
-    float: left;
+body{
+    font-family: "Futura PT Medium";
+    background-color: rgb(140, 228, 255);
+}
+
+#nav_bar{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 #nav > li{
@@ -7,9 +14,40 @@
 }
 
 #nav > li:hover{
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(111, 255, 255);
 }
 
 hr{
-    margin-top:0px;
+    margin:0px;
+    border-color: rgb(156, 232, 255);
+}
+
+#mine{
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mine_problem{
+    font-size: 75px;
+}
+
+#mine_textbox{
+    display: flex;
+    flex-direction: row;
+}
+
+#mine_textbox > form > input{
+    width: 500px;
+    height: 35px;
+    font-size: 35px;
+}
+
+#mine_button{
+    margin-left: 10px;
+    width: 100px;
+    height: 35px;
 }

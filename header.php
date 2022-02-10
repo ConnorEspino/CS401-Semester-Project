@@ -1,12 +1,8 @@
 <html>
     <head>
         <title>NFT Black Market</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <h1>
-        Howdy
-        </h1>
-    </head>
-    <body>
+        <link rel="stylesheet" type="text/css" href="headerstyle.css">
+
         <div id="nav-bar">
             <ul id="nav">
                 <li><a href="mine.php">Mine</a></li>
@@ -15,5 +11,5 @@
             </ul>
             <hr/>
         </div>
-    </body>
+    </head>
 </html>
