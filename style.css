@@ -1,6 +1,6 @@
 body{
     font-family: "Futura PT Medium";
-    background-color: rgb(140, 228, 255);
+    background-color: rgb(98, 218, 255);
 }
 
 #nav_bar{
@@ -9,17 +9,29 @@ body{
     align-items: center; 
 }
 
+#nav{
+    padding-left:0px;
+    margin: 0px;
+}
+
 #nav > li{
+    width: 85px;
+    height: 85px;
+    margin-left: 20px;
+    margin-right: 20px;
     display: inline-block;
+    text-align:center;
+    border-width: 5px;
+    border-color: rgb(30, 203, 255);
 }
 
 #nav > li:hover{
-    background-color: rgb(111, 255, 255);
+    background-color: rgb(121, 224, 255);
 }
 
 hr{
     margin:0px;
-    border-color: rgb(156, 232, 255);
+    border-color: rgb(98, 218, 255);
 }
 
 #mine{
@@ -33,6 +45,7 @@ hr{
 
 #mine_problem{
     font-size: 75px;
+    color: white;
 }
 
 #mine_textbox{
@@ -47,7 +60,80 @@ hr{
 }
 
 #mine_button{
+    font-family: "Futura PT Medium";
+    font-size: 25px;
+    border-width: 1px;
+    background-color: white;
     margin-left: 10px;
     width: 100px;
     height: 35px;
+}
+
+#sort{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+#sort > select{
+    font-size: 20px;
+}
+
+.container > a > img{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.content{
+    text-align: center;
+    color: black;
+    
+}
+
+.content > h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: rgba(255, 255, 255, .5);    
+}
+
+#marketplace > ol > li{
+    display: inline-block;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: 100px;
+    padding-left: 0px;
+    border: 5px solid white;
+}
+
+#marketplace > ol{
+    padding-left: 0px;
+}
+
+#marketplace{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#leaderboard{
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#leaderboard > table, tr{
+    border: 1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    color: white;
+    font-size: 30px;
+}
+
+#leaderboard > table{
+    width: 90%;
 }
