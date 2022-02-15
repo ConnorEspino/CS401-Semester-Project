@@ -25,8 +25,26 @@ body{
     border-color: rgb(30, 203, 255);
 }
 
-#nav > li:hover{
-    background-color: rgb(121, 224, 255);
+#nav > li{
+    width: 85px;
+    height: 85px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    text-align:center;
+    border-width: 5px;
+    border-color: rgb(30, 203, 255);
+}
+
+#nav > #account{
+    width: 85px;
+    height: 85px;
+    margin-left: 200px;
+    margin-right: 20px;
+    display: inline-block;
+    text-align:center;
+    border-width: 5px;
+    border-color: rgb(30, 203, 255);
 }
 
 hr{
