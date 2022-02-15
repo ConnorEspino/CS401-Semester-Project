@@ -36,7 +36,7 @@ body{
     border-color: rgb(30, 203, 255);
 }
 
-#nav > #account{
+#nav > .account{
     width: 85px;
     height: 85px;
     margin-left: 200px;
