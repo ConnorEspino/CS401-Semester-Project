@@ -32,19 +32,18 @@ body{
     margin-right: 20px;
     display: inline-block;
     text-align:center;
-    border-width: 5px;
-    border-color: rgb(30, 203, 255);
 }
 
-#nav > .account{
+#nav {
+    margin-left: auto;
+    padding-left: 5%;
+}
+
+#nav_bar > a{
     width: 85px;
     height: 85px;
-    margin-left: 200px;
-    margin-right: 20px;
-    display: inline-block;
-    text-align:center;
-    border-width: 5px;
-    border-color: rgb(30, 203, 255);
+    float: right;
+    margin-left: auto;
 }
 
 hr{
