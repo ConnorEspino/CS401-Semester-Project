@@ -1,19 +1,6 @@
 <html>
-    <head>
-        <title>NFT Black Market</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" type="image/x-icon" href="favicon.png">
-    
-        <div id="nav_bar">
-            <ul id="nav">
-                <li><a href="index.html"><img src="Mine.png"></a></li>
-                <li><a href="market.html"><img src="Market.png"></a></li>
-                <li><a href="leaderboard.html"><img src="Leaderboard.png"></a></li>
-            </ul>
-            <a href="account.html"><img src="Account.png"></a>
-        </div>
-        <hr/>
-    </head>
+    <?php require_once 'header.php';?>    
+
     <body>
         <div id="leaderboard">
             <table id="lead_table">

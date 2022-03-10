@@ -1,19 +1,6 @@
 <html>
-    <head>
-        <title>NFT Black Market</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" type="image/x-icon" href="favicon.png">
-    
-        <div id="nav_bar">
-            <ul id="nav">
-                <li><a href="index.html"><img src="Mine.png"></a></li>
-                <li><a href="market.html"><img src="Market.png"></a></li>
-                <li><a href="leaderboard.html"><img src="Leaderboard.png"></a></li>
-            </ul>
-            <a href="account.html"><img src="Account.png"></a>
-        </div>
-        <hr/>
-    </head>
+    <?php require_once 'header.php';?>    
+
     <body>
         <div id="sort">
             <label>
@@ -30,7 +17,7 @@
             <ol>
                 <li>
                     <div class="container">
-                        <a href="purchase.html"><img src="monkee.png">
+                        <a href="purchase.php"><img src="monkee.png">
                             <div class="content">
                                 <h1>Price: $6969</h1>
                             </div>
@@ -40,7 +27,7 @@
                     
                 <li>
                     <div class="container">
-                        <a href="purchase.html"><img src="monkee2.png">
+                        <a href="purchase.php"><img src="monkee2.png">
                             <div class="content">
                                 <h1>Price: $6969</h1>
                             </div>
@@ -50,7 +37,7 @@
 
                 <li>
                     <div class="container">
-                        <a href="purchase.html"><img src="monkee3.png">
+                        <a href="purchase.php"><img src="monkee3.png">
                             <div class="content">
                                 <h1>Price: $6969</h1>
                             </div>
@@ -60,7 +47,7 @@
 
                 <li>
                     <div class="container">
-                        <a href="purchase.html"><img src="monkee4.png">
+                        <a href="purchase.php"><img src="monkee4.png">
                             <div class="content">
                                 <h1>Price: $6969</h1>
                             </div>
