@@ -65,12 +65,6 @@ hr{
     color: white;
 }
 
-#mine_textbox{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 #answer{
     width: 500px;
     height: 35px;
@@ -85,6 +79,12 @@ hr{
     margin-left: 10px;
     width: 100px;
     height: 35px;
+}
+
+#mine_form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #post_mining_message{

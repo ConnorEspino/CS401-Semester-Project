@@ -42,11 +42,11 @@
                 ?>
             </h1>
 
-            <div id="mine_textbox">
+            <div>
                 <form for="answer" action="mining_handler.php" method="POST">
-                    <div>
-                    <input type="text" id="answer" name="answer" placeholder="Enter your answer...">
-                    <input type="submit" id="mine_button" value=" Enter ">
+                    <div id="mine_form">
+                        <input type="text" id="answer" name="answer" placeholder="Enter your answer...">
+                        <input type="submit" id="mine_button" value=" Enter ">
                     </div>
                 </form>
             </div>
