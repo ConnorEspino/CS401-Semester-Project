@@ -43,7 +43,7 @@
                 <form for="answer" action="mining_handler.php" method="POST">
                     <input type="text" id="answer" name="answer" placeholder="Enter your answer...">
                 </form>
-                <button id="mine_button" type="submit"> Enter </button>
+                <input type="submit" id="mine_button" value=" Enter ">
             </div>
             <?php 
                 echo $_SESSION['correct'];
