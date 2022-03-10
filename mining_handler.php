@@ -10,10 +10,12 @@
         $_SESSION['message'] = "Correct! +$5";
     }
 
-    require_once 'Dao.php';
-    $dao = new Dao();
+    // require_once 'Dao.php';
+    // $dao = new Dao();
 
     #Do some DB stuff here
-    header('Location: index.php');
-    exit;
+    // header('Location: index.php');
+    // exit;
+
+    echo $_SESSION;
 ?>
