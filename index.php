@@ -1,9 +1,9 @@
 <html>
     <?php 
         session_start();
-        if(isset($_SESSION['message'])){
-            unset($_SESSION['message']);
-        }
+        // if(isset($_SESSION['message'])){
+        //     unset($_SESSION['message']);
+        // }
 
         if(isset($_SESSION['correct'])){
             unset($_SESSION['correct']);

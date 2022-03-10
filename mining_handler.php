@@ -1,6 +1,10 @@
 <?php 
     session_start();
 
+    if(isset($_SESSION['message'])){
+        unset($_SESSION['message']);
+    }
+
     $answer = $_POST['answer'];
     if(!is_numeric($answer)){
         $_SESSION['message'] = "Please enter a number";
