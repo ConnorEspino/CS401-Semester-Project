@@ -20,7 +20,7 @@
                     
                     $num1 = rand(-20, 20);
                     $num2 = rand(-20, 20);
-                    $oper = rand(0,3);
+                    $oper = rand(0,2);
 
                     switch($oper){
                         case 0:
