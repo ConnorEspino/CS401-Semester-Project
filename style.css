@@ -86,13 +86,17 @@ hr{
     height: 35px;
 }
 
-#good_message{
+#post_mining_message{
     border: 1px, white, solid;
+    padding: 10px 10px;
+    font-size: 10px;
+}
+
+#good_message{
     background-color: green;
 }
 
 #bad_message{
-    border: 1px, white, solid;
     background-color: red;
 }
 
