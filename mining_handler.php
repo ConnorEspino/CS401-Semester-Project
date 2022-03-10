@@ -18,4 +18,5 @@
     // exit;
     echo $_POST['answer'];
     echo $_SESSION['message'];
+    echo $_SESSION['correct'];
 ?>
