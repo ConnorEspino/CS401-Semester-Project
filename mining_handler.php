@@ -8,15 +8,15 @@
     $answer = $_POST['answer'];
 
     if(!is_numeric($answer)){
-        $_SESSION['message'] = "Please enter a number";
+        $_SESSION['message'] = " id=bad_message> Please enter a number";
         header('Location: index.php');
         exit;
     }
 
     if($_SESSION['correct'] == $_POST['answer']){
-        $_SESSION['message'] = "Correct! +$5";
+        $_SESSION['message'] = " id=good_message> Correct! +$5";
     }else{
-        $_SESSION['message'] = "Incorrect, try again!";
+        $_SESSION['message'] = " id=bad_message> Incorrect, try again!";
     }
 
     // require_once 'Dao.php';

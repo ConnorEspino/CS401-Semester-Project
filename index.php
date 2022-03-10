@@ -18,6 +18,7 @@
             <h1 id="mine_problem">
                 <?php
                     
+                    //Generate a random problem
                     $num1 = rand(-20, 20);
                     $num2 = rand(-20, 20);
                     $oper = rand(0,2);
@@ -34,6 +35,8 @@
                             break;
                     }
 
+                    //Add the correct answer to the session variable 
+                    //and print out the problem on the screen
                     $_SESSION['correct'] = $ans;
                     echo $num1 . '  ' . $operands[$oper] . '  ' . $num2;
                 ?>
@@ -48,7 +51,8 @@
 
             <div>
                 <?php 
-                    echo $_SESSION['message'];
+                    //Print out whatever message comes across
+                    echo '<p ' . $_SESSION['message'] . " </p>";
                 ?>
             </div>
         </div>

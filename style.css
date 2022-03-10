@@ -86,6 +86,16 @@ hr{
     height: 35px;
 }
 
+#good_message{
+    border: 1px, white, solid;
+    background-color: green;
+}
+
+#bad_message{
+    border: 1px, white, solid;
+    background-color: red;
+}
+
 #sort{
     margin-top: 10px;
     margin-left: 10px;
