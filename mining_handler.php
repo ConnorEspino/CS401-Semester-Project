@@ -16,6 +16,6 @@
     #Do some DB stuff here
     // header('Location: index.php');
     // exit;
-
-    echo $_SESSION;
+    echo $_POST['answer'];
+    echo $_SESSION['message'];
 ?>
