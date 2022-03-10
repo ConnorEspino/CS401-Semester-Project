@@ -52,7 +52,9 @@
             <div id="post_mining_message">
                 <?php 
                     //Print out whatever message comes across
-                    echo '<p ' . $_SESSION['message'] . " </p>";
+                    if(isset($_SESSION['message'])){
+                        echo '<p ' . $_SESSION['message'] . " </p>";
+                    }
                 ?>
             </div>
         </div>
