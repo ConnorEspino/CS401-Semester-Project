@@ -11,20 +11,19 @@
                     $num1 = rand(-20, 20);
                     $num2 = rand(-20, 20);
                     $oper = rand(0,3);
-                    $ans;
 
                     switch($oper){
-                        case '+':
+                        case 0:
                             $ans = $num1 + $num2;
                             break;
-                        case '-':
+                        case 1:
                             $ans = $num1 - $num2;
                             break;
-                        case '/':
+                        case 2:
                             $ans = $num1 / $num2;
                             break;
-                        case '/':
-                            $ans = $num1 / $num2;
+                        case 3:
+                            $ans = $num1 * $num2;
                             break;
                     }
                     echo $num1 . '  ' . $operands[$oper] . '  ' . $num2;
