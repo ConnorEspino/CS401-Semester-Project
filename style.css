@@ -82,6 +82,7 @@ hr{
     border-width: 1px;
     background-color: white;
     margin-left: 10px;
+    margin-top: 0px;
     width: 100px;
     height: 35px;
 }
