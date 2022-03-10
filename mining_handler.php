@@ -16,9 +16,11 @@
     // $dao = new Dao();
 
     #Do some DB stuff here
-    // header('Location: index.php');
-    // exit;
+    
     echo $_POST['answer'];
     echo $_SESSION['message'];
     echo $_SESSION['correct'];
+
+    header('Location: index.php');
+    exit;
 ?>
