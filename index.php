@@ -11,7 +11,7 @@
                     $num1 = rand(-100, 100);
                     $num2 = rand(-100, 100);
                     $oper = rand(0,3);
-                    echo num1 . operands[oper] . num2;
+                    echo $num1 . $operands[$oper] . $num2;
                 ?>
             </h1>
 
