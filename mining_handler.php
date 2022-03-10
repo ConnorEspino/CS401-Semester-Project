@@ -8,6 +8,8 @@
 
     if($_SESSION['correct'] == $_POST['answer']){
         $_SESSION['message'] = "Correct! +$5";
+    }else{
+        $_SESSION['message'] = "Incorrect, try again!";
     }
 
     // require_once 'Dao.php';
