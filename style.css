@@ -87,8 +87,10 @@ hr{
 }
 
 #post_mining_message{
-    padding: 30px 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 25px;
+    color: white;
 }
 
 #good_message{
