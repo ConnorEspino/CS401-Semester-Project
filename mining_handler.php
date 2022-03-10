@@ -6,8 +6,11 @@
     }
 
     $answer = $_POST['answer'];
+
     if(!is_numeric($answer)){
         $_SESSION['message'] = "Please enter a number";
+        header('Location: index.php');
+        exit;
     }
 
     if($_SESSION['correct'] == $_POST['answer']){
@@ -19,11 +22,7 @@
     // require_once 'Dao.php';
     // $dao = new Dao();
 
-    #Do some DB stuff here
-    
-    echo $_POST['answer'];
-    echo $_SESSION['message'];
-    echo $_SESSION['correct'];
+    #Do some DB stuff here once login is figured out
 
     header('Location: index.php');
     exit;
