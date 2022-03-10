@@ -3,11 +3,11 @@
 
     $answer = $_POST['answer'];
     if(!is_numeric($answer)){
-        $_SESSION['message'][] = "Please enter a number";
+        $_SESSION['message'] = "Please enter a number";
     }
 
     if($_SESSION['correct'] == $_POST['answer']){
-        $_SESSION['message'][] = "Correct! +$5";
+        $_SESSION['message'] = "Correct! +$5";
     }
 
     require_once 'Dao.php';
