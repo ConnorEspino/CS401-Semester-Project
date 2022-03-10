@@ -45,10 +45,12 @@
                     <input type="submit" id="mine_button" value=" Enter ">
                 </form>
             </div>
-            <?php 
-                echo $_SESSION['correct'];
-                echo $_SESSION['message'];
-            ?>
+
+            <div>
+                <?php 
+                    echo $_SESSION['message'];
+                ?>
+            </div>
         </div>
     </body>
 </html>
