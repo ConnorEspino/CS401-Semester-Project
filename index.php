@@ -8,10 +8,26 @@
         <div id="mine">
             <h1 id="mine_problem">
                 <?php
-                    $num1 = rand(-100, 100);
-                    $num2 = rand(-100, 100);
+                    $num1 = rand(-20, 20);
+                    $num2 = rand(-20, 20);
                     $oper = rand(0,3);
-                    echo $num1 . $operands[$oper] . $num2;
+                    $ans;
+
+                    switch($oper){
+                        case '+':
+                            $ans = $num1 + $num2;
+                            break;
+                        case '-':
+                            $ans = $num1 - $num2;
+                            break;
+                        case '/':
+                            $ans = $num1 / $num2;
+                            break;
+                        case '/':
+                            $ans = $num1 / $num2;
+                            break;
+                    }
+                    echo $num1 . '  ' . $operands[$oper] . '  ' . $num2;
                 ?>
             </h1>
 
@@ -21,6 +37,9 @@
                 </form>
                 <button id="mine_button"> Enter </button>
             </div>
+            <?php 
+                echo $ans;
+            ?>
         </div>
     </body>
 </html>
