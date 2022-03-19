@@ -29,7 +29,7 @@
     
 
     if(isset($_SESSION['login_messages'])){
-        header('Location: login.php');
+        header('Location: index.php');
         exit;
     }
     
