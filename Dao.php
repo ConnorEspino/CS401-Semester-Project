@@ -40,6 +40,16 @@ class Dao {
     $q->execute();
   }
 
+  public function login($user, $pass){
+    $conn = $this->getConnection();
+    $selectQuery = "SELECT * FROM user WHERE username = :username AND password = :password";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":username", $user);
+    $q->bindParam(":password", $pass);
+    $q->execute();
+    return $q->rowCount() > 0;
+  }
+
   public function isUser($username) {
     $conn = $this->getConnection();
     $selectQuery = "SELECT * FROM user WHERE username = :username";
