@@ -3,7 +3,7 @@
 
     // $userLogin = $_POST['username_login'];
     // $passLogin = $_POST['password_login'];
-    echo $_POST;
+    echo print_r($_POST);
 
     // $userReg = $_POST['username_reg'];
     // $passReg = $_POST['password_reg'];
