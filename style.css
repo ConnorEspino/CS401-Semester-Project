@@ -227,6 +227,12 @@ hr{
     background-color: white;
 }
 
+#login{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
 #login_form{
     color: white;
     display: flex;
