@@ -8,8 +8,8 @@
 
                 <div id="login_form">
                     <h1>Login</h1>
-                    <input type="text" id="username" name="username" placeholder="Username">
-                    <input type="text" id="password" name="password" placeholder="Password">
+                    <input type="text" id="login_info" name="username" placeholder="Username">
+                    <input type="text" id="login_info" name="password" placeholder="Password">
                     <input type="submit" id="mine_button" value=" Enter ">
                 </div>
             </form>
@@ -18,8 +18,8 @@
 
                 <div id="login_form">
                     <h1>Register</h1>
-                    <input type="text" id="username" name="username" placeholder="Username">
-                    <input type="text" id="password" name="password" placeholder="Password">
+                    <input type="text" id="login_info" name="username" placeholder="Username">
+                    <input type="text" id="login_info" name="password" placeholder="Password">
                     <input type="submit" id="mine_button" value=" Enter ">
                 </div>
             </form>

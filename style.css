@@ -229,18 +229,21 @@ hr{
 
 #login{
     display: flex;
+    height: 100%;
     align-items: center;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 200px;
 }
 
 #login_form{
     color: white;
     display: flex;
-    align-items:stretch;
+    align-items: center;
     flex-direction: column;
 }
 
-#login_form > input > text{
+#login_info{
     font-size: 20px;
     width: 100px;
 }
