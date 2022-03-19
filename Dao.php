@@ -35,17 +35,19 @@ class Dao {
     $q->execute();
   }
 
-  public function saveComment ($comment) {
+  public function registerUser($username, $password){
     $conn = $this->getConnection();
     $saveQuery =
-        "INSERT INTO comment
-        (comment)
+        "INSERT INTO user
+        (username, password)
         VALUES
-        (:comment)";
+        (:username, :password)";
     $q = $conn->prepare($saveQuery);
-    $q->bindParam(":comment", $comment);
+    $q->bindParam(":username", $username);
+    $q->bindParam(":password", $password);
     $q->execute();
   }
+
 
   public function getComments () {
     $conn = $this->getConnection();
