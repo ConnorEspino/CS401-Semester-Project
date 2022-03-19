@@ -17,12 +17,15 @@
         $_SESSION['mine_message'] = " id=good_message> Correct! +$5";
     }else{
         $_SESSION['mine_message'] = " id=bad_message> Incorrect, try again!";
+        header('Location: index.php');
+        exit;
     }
 
-    // require_once 'Dao.php';
-    // $dao = new Dao();
+    require_once 'Dao.php';
+    $dao = new Dao();
 
-    #Do some DB stuff here once login is figured out
+    //Increment the balance of the user when they get a correct answer.
+    $dao->incrementBal($_SESSION['user_id']);
 
     #Art sourced from the finest right click saves
     header('Location: index.php');

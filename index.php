@@ -1,66 +1,59 @@
 <html>
     <?php 
+        require_once 'header.php';
         session_start();
-        // if(isset($_SESSION['message'])){
-        //     unset($_SESSION['message']);
-        // }
-
-        if(isset($_SESSION['correct'])){
-            unset($_SESSION['correct']);
+        if(isset($_SESSION['user_id'])){
+            // unset($_SESSION['user_id']);
+            header('Location: mining.php');
+            exit();
         }
 
-        require_once 'header.php';
-        $operands = array("+", "-", "*");
     ?>
     
     <body>
-        <div id="mine">
-            <h1 id="mine_problem">
-                <?php
-                    
-                    //Generate a random problem
-                    $num1 = rand(-20, 20);
-                    $num2 = rand(-20, 20);
-                    $oper = rand(0,2);
+        <div id="login">
+            
+            <form for="login" action="login_handler.php" method="POST">
 
-                    switch($oper){
-                        case 0:
-                            $ans = $num1 + $num2;
-                            break;
-                        case 1:
-                            $ans = $num1 - $num2;
-                            break;
-                        case 2:
-                            $ans = $num1 * $num2;
-                            break;
-                    }
+                <div id="login_form">
+                    <h1>Login</h1>
+                    <input type="text" id="login_info" name="username" placeholder="Username">
+                    <input type="password" id="login_info" name="password" placeholder="Password">
+                    <input type="submit" id="mine_button" value=" Enter ">
+                </div>
+            </form>
 
-                    //Add the correct answer to the session variable 
-                    //and print out the problem on the screen
-                    $_SESSION['correct'] = $ans;
-                    echo $num1 . '  ' . $operands[$oper] . '  ' . $num2;
-                ?>
-            </h1>
+            <form for="register" action="register_handler.php" method="POST">
 
-            <div>
-                <form for="answer" action="mining_handler.php" method="POST">
-                    <div id="mine_form">
-                        <input type="text" id="answer" name="answer" placeholder="Enter your answer...">
-                        <input type="submit" id="mine_button" value=" Enter ">
-                    </div>
-                </form>
-            </div>
+                <div id="login_form">
+                    <h1>Register</h1>
+                    <input type="text" id="login_info" name="username" placeholder="Username">
+                    <input type="password" id="login_info" name="password" placeholder="Password">
+                    <input type="submit" id="mine_button" value=" Enter ">
+                </div>
+            </form>
+            
+        </div>  
 
-            <div class="post_action_message">
+        <div class="post_action_message">
                 <?php 
-                    //Print out whatever message comes across
-                    if(isset($_SESSION['mine_message'])){
-                        echo '<p ' . $_SESSION['mine_message'] . " </p>";
+                    //Print out whatever message comes across from the handler
+                    if(isset($_SESSION['register_messages'])){
+                        foreach($_SESSION['register_messages'] as $message){
+                            echo '<p ' . $message . " </p>";
+                        }
                     }
 
-                    unset($_SESSION['mine_message']);
+                    if(isset($_SESSION['login_messages'])){
+                        foreach($_SESSION['login_messages'] as $message){
+                            echo '<p ' . $message . " </p>";
+                        }
+                    }
+
+                    unset($_SESSION['register_messages']);
+                    unset($_SESSION['login_messages']);
                 ?>
             </div>
-        </div>
+            
     </body>
 </html>

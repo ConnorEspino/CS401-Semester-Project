@@ -6,7 +6,7 @@
         
         <div id="nav_bar">
             <ul id="nav">
-                <li><a href="index.php"><img src="Mine.png"></a></li>
+                <li><a href="mining.php"><img src="Mine.png"></a></li>
                 <li><a href="market.php"><img src="Market.png"></a></li>
                 <li><a href="leaderboard.php"><img src="Leaderboard.png"></a></li>
             </ul>

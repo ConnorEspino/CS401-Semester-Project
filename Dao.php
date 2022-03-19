@@ -94,4 +94,20 @@ class Dao {
     $q->execute();
     return $q->fetchColumn(0);
   }
+
+  //Increments the balance of a user by 5
+  public function incrementBal($id) {
+    $conn = $this->getConnection();
+    $insertQuery = "UPDATE user SET balance=balance+5 WHERE user_id = :id";
+    $q = $conn->prepare($insertQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+  }
+
+  public function getUsers(){
+    $conn = $this->getConnection();
+    return $conn->query('SELECT * FROM user ORDER BY balance DESC;');
+  }
+
+
 } // end Dao
