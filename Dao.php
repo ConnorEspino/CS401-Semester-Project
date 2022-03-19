@@ -12,7 +12,7 @@ class Dao {
   private $pass = "9e728f00";
 
   public function __construct() {
-    $this->logger = new KLogger ( "log.txt" , KLogger::WARN );
+    $this->logger = new KLogger ( "log.txt" , KLogger::INFO );
   }
 
   public function getConnection () {
@@ -25,15 +25,6 @@ class Dao {
        exit;
     }
   }
-  public function deleteComment ($id) {
-     $this->logger->LogInfo("comment deleted, id=[{$id}]");
-    
-    $conn = $this->getConnection();
-    $deleteQuery = "DELETE FROM comment WHERE comment_id = :id";
-    $q = $conn->prepare($deleteQuery);
-    $q->bindParam(":id", $id);
-    $q->execute();
-  }
 
   public function registerUser($username, $password){
     $conn = $this->getConnection();
@@ -45,12 +36,52 @@ class Dao {
     $q = $conn->prepare($saveQuery);
     $q->bindParam(":username", $username);
     $q->bindParam(":password", $password);
+    $this->logger->LogInfo("Registering user: {$username} with password: {$password}");
     $q->execute();
   }
 
-
-  public function getComments () {
+  public function isUser($username) {
     $conn = $this->getConnection();
-    return $conn->query("SELECT * FROM comment ORDER BY date_entered DESC");
+    $selectQuery = "SELECT * FROM user WHERE username = :username";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":username", $username);
+    $q->execute();
+    return $q->rowCount() > 0;
+  }
+
+  public function getId($username) {
+    $conn = $this->getConnection();
+    $selectQuery = "SELECT user_id FROM user WHERE username = :username";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":username", $username);
+    $q->execute();
+    return $q->fetchColumn(0);
+  }
+
+  public function getUser($id) {
+    $conn = $this->getConnection();
+    $selectQuery = "SELECT username FROM user WHERE user_id = :id";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+    return $q->fetchColumn(0);
+  }
+
+  public function getPass($id) {
+    $conn = $this->getConnection();
+    $selectQuery = "SELECT password FROM user WHERE user_id = :id";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+    return $q->fetchColumn(0);
+  }
+
+  public function getBalance($id) {
+    $conn = $this->getConnection();
+    $selectQuery = "SELECT balance FROM user WHERE user_id = :id";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+    return $q->fetchColumn(0);
   }
 } // end Dao

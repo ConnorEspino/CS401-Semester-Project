@@ -51,12 +51,14 @@
                 </form>
             </div>
 
-            <div id="post_mining_message">
+            <div class="post_action_message">
                 <?php 
                     //Print out whatever message comes across
-                    if(isset($_SESSION['message'])){
-                        echo '<p ' . $_SESSION['message'] . " </p>";
+                    if(isset($_SESSION['mine_message'])){
+                        echo '<p ' . $_SESSION['mine_message'] . " </p>";
                     }
+
+                    unset($_SESSION['mine_message']);
                 ?>
             </div>
         </div>

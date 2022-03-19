@@ -1,8 +1,8 @@
 CREATE TABLE user(
-    user_id INT AUTO_INCREMENT,
-    email VARCHAR(256) NOT NULL,
-    password VARCHAR(64) NOT NULL,
-    balance INT NOT NULL,
+	user_id INT AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL UNIQUE,
+	password VARCHAR(64) NOT NULL,
+    balance INT DEFAULT 0,
     signup_time DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(user_id)
 );
