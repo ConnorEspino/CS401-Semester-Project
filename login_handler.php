@@ -1,8 +1,8 @@
 <?php 
     session_start();
 
-    $userLogin = $_POST['username_login'];
-    $passLogin = $_POST['password_login'];
+    // $userLogin = $_POST['username_login'];
+    // $passLogin = $_POST['password_login'];
 
     $userReg = $_POST['username_reg'];
     $passReg = $_POST['password_reg'];
