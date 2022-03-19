@@ -236,6 +236,11 @@ hr{
 #login_form{
     color: white;
     display: flex;
-    align-items: center;
+    align-items:stretch;
     flex-direction: column;
+}
+
+#login_form > input > text{
+    font-size: 20px;
+    width: 100px;
 }
