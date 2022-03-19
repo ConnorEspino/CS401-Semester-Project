@@ -5,14 +5,14 @@
     // $passLogin = $_POST['password_login'];
     echo print_r($_POST);
 
-    // $userReg = $_POST['username_reg'];
-    // $passReg = $_POST['password_reg'];
+    $userReg = $_POST['username_reg'];
+    $passReg = $_POST['password_reg'];
 
-    // require_once 'Dao.php';
-    // $dao = new Dao();
+    require_once 'Dao.php';
+    $dao = new Dao();
 
     // if(isset($userReg)){
-    //     $dao->registerUser($userReg, $passReg);
+        $dao->registerUser($userReg, $passReg);
     // }
 
     // header('Location: index.php');
