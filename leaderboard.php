@@ -4,7 +4,8 @@
         session_start();
         
         if(!isset($_SESSION['user_id'])){
-            header('Location: login.php');
+            $_SESSION['login_messages'] = " id=bad_message> Please login before browsing";
+            header('Location: index.php');
             exit();
         }
 
@@ -28,7 +29,7 @@
                     foreach($users->fetchAll() as $user){
                         echo '<tr>';
                         echo '<td>' . $count . '.</td>';
-                        echo '<td>' . $user[1] . '</td>';
+                        echo '<td>' . htmlspecialchars($user[1]) . '</td>';
                         echo '<td>$' . $user[3] . '</td>';
                         echo '</tr>';
                         $count++;

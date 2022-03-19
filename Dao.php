@@ -104,6 +104,7 @@ class Dao {
     $q->execute();
   }
 
+  //Returns an array of every user
   public function getUsers(){
     $conn = $this->getConnection();
     return $conn->query('SELECT * FROM user ORDER BY balance DESC;');

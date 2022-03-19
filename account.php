@@ -1,15 +1,21 @@
 <html>
     <?php
+        session_start();
         require_once 'header.php';
+
         if(!isset($_SESSION['user_id'])){
-            header('Location: login.php');
+            $_SESSION['login_messages'] = " id=bad_message> Please login before browsing";
+            header('Location: index.php');
             exit();
-        }    
+        }
+
+        require_once 'Dao.php';
+        $dao = new Dao();
     ?>
     
     <body>
         <div id="account">
-            <h1>Balance: $50000</h1>
+            <h1><?php echo htmlspecialchars($dao->getUser($_SESSION['user_id'])) ?>'s Balance: $<?php echo $dao->getBalance($_SESSION['user_id'])?></h1>
             <h1>Your Purchases</h1>
             <div id="purchases">
                 <ol>
