@@ -24,6 +24,7 @@
 
     #Do some DB stuff here once login is figured out
 
+    #Art sourced from the finest right click saves
     header('Location: index.php');
     exit;
 ?>
