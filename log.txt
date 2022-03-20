@@ -2,3 +2,4 @@ now - INFO  --> Registering user: asd with password: asf
 now - INFO  --> Registering user: asd with password: asd 
 now - INFO  --> Registering user: Henry with password:  
 now - INFO  --> Registering user: Howdy with password: Connor 
+now - INFO  --> Registering user: admin with password: ConnorEspino 
