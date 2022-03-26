@@ -125,6 +125,7 @@ class Dao {
     $q->execute();
   }
 
+  //Removes an image from the database
   public function deleteImage($id){
     $conn = $this->getConnection();
     $deleteQuery = "DELETE FROM image WHERE img_id = :id";
@@ -133,6 +134,7 @@ class Dao {
     $q->execute();
   }
 
+  //Returns the relative path of the image from the database
   public function getImgPath($id){
     $conn = $this->getConnection();
     $selectQuery = "SELECT rel_path FROM image WHERE img_id = :id";
@@ -140,6 +142,48 @@ class Dao {
     $q->bindParam(":id", $id);
     $q->execute();
     return $q->fetchColumn(0);
+  }
+
+  //Returns an array of all images in the database
+  public function getAllImages(){
+    $conn = $this->getConnection();
+    return $conn->query('SELECT * FROM image ORDER BY price DESC;');
+  }
+
+  //Returns the image with the given ID
+  public function getImage($id){
+    $conn = $this->getConnection();
+    $selectQuery = "SELECT * FROM image WHERE img_id = :id";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+    return $q->fetchObject();
+  }
+
+  public function setImageStatusBought($id){
+    $conn = $this->getConnection();
+    $updateQuery = "UPDATE image SET status = 1 WHERE img_id = :id";
+    $q = $conn->prepare($updateQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+  }
+
+  public function buyImage($userId, $imgId){
+    $conn = $this->getConnection();
+    $insertQuery = "INSERT INTO owned_img (user_id, img_id) VALUES (:userId, :imgId)";
+    $q = $conn->prepare($insertQuery);
+    $q->bindParam(":userId", $userId);
+    $q->bindParam(":imgId", $imgId);
+    $q->execute();
+  }
+
+  public function subtractBalance($userId, $sub){
+    $conn = $this->getConnection();
+    $updateQuery = "UPDATE user SET balance = balance - :sub WHERE user_id = :id";
+    $q = $conn->prepare($updateQuery);
+    $q->bindParam(":sub", $sub);
+    $q->bindParam(":id", $userId);
+    $q->execute();
   }
 
 } // end Dao

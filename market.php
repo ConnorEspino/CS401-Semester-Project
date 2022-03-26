@@ -1,5 +1,11 @@
 <html>
-    <?php require_once 'header.php';?>    
+    <?php 
+        require_once 'header.php';
+        session_start();
+
+        require_once 'Dao.php';
+        $dao = new Dao();    
+    ?>    
 
     <body>
         <div id="sort">
@@ -15,45 +21,22 @@
 
         <div id="marketplace">
             <ol>
-                <li>
-                    <div class="container">
-                        <a href="purchase.php"><img src="monkee.png">
-                            <div class="content">
-                                <h1>Price: $6969</h1>
+                <?php 
+                    $images = $dao->getAllImages();
+                    foreach($images->fetchAll() as $img){
+                        if($img[3] != 1){
+                            echo '<li>
+                            <div class="container">
+                                <a href="purchase.php?id=' . $img[0] . '"><img src="' . $img[4] . '">
+                                    <div class="content">
+                                        <h1>Price: $' . $img[2] .'</h1>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </li>
-                    
-                <li>
-                    <div class="container">
-                        <a href="purchase.php"><img src="monkee2.png">
-                            <div class="content">
-                                <h1>Price: $6969</h1>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="container">
-                        <a href="purchase.php"><img src="monkee3.png">
-                            <div class="content">
-                                <h1>Price: $6969</h1>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="container">
-                        <a href="purchase.php"><img src="monkee4.png">
-                            <div class="content">
-                                <h1>Price: $6969</h1>
-                            </div>
-                        </a>
-                    </div>
-                </li>
+                        </li>';
+                        }
+                    }
+                ?>
             </ol>
         </div>
     </body>
