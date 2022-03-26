@@ -125,5 +125,20 @@ class Dao {
     $q->execute();
   }
 
+  public function deleteImage($id){
+    $conn = $this->getConnection();
+    $deleteQuery = "DELETE FROM image WHERE img_id = :id";
+    $q = $conn->prepare($deleteQuery);
+    $q->bindParam(":id", $id);
+  }
+
+  public function getImgPath($id){
+    $conn = $this->getConnection();
+    $selectQuery = "SELECT rel_path FROM image WHERE img_id = :id";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+    return $q->fetchColumn(4);
+  }
 
 } // end Dao

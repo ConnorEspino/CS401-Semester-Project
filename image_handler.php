@@ -18,6 +18,8 @@
             
             $dao->addImage($title, $price, $imagePath);
             
+            $_SESSION['img_message'] = " id=good_message> Image added!";
+
             header('Location: img_upload.php');
             exit;
         }
