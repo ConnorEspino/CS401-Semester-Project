@@ -110,5 +110,20 @@ class Dao {
     return $conn->query('SELECT * FROM user ORDER BY balance DESC;');
   }
 
+  //Adds a new image into the database
+  public function addImage($title, $price, $rel_path){
+    $conn = $this->getConnection();
+    $saveQuery =
+        "INSERT INTO image
+        (title, price, rel_path)
+        VALUES
+        (:title, :price, :rel_path)";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":title", $title);
+    $q->bindParam(":price", $price);
+    $q->bindParam(":rel_path", $rel_path);
+    $q->execute();
+  }
+
 
 } // end Dao

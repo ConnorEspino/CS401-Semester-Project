@@ -2,6 +2,7 @@
     session_start();
 
     $price = $_POST['price'];
+    $title = $_POST['title'];
 
     require_once 'Dao.php';
     $dao = new Dao();
@@ -15,8 +16,10 @@
                 throw new Exception("File move failed");
             }
             
-            //Database implementation
+            $dao->addImage($title, $price, $imagePath);
             
+            header('Location: img_upload.php');
+            exit;
         }
     }
 ?>
