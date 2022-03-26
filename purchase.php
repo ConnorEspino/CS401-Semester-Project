@@ -34,9 +34,14 @@
                 <h1>Price: $<?php echo $img['price']?></h1>
             </div>
 
-            <form for="register" action="purchase_buy_handler.php?id=<?php echo $imgId ?>" method="POST">
-                    <input type="submit" id="purchase_button" value="Buy">
-            </form>
+            <div>
+                <form for="register" action="purchase_buy_handler.php?id=<?php echo $imgId ?>" method="POST">
+                        <input type="submit" id="purchase_button" value="Buy">
+                </form>
+                <form for="register" action="purchase_sell_handler.php?id=<?php echo $imgId ?>" method="POST">
+                        <input type="submit" id="purchase_button" value="Sell">
+                </form>
+            </div>
         </div>
 
         <div class="post_action_message">

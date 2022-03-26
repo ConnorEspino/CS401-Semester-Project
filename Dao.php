@@ -178,10 +178,29 @@ class Dao {
     $q->execute();
   }
 
-  //Inserts a new row into the owned_image table which sells the image
+  //Sets the status of an image to 0
+  public function setImageStatusSold($id){
+    $conn = $this->getConnection();
+    $updateQuery = "UPDATE image SET status = 0 WHERE img_id = :id";
+    $q = $conn->prepare($updateQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+  }
+
+  //Inserts a new row into the owned_image table which buys the image
   public function buyImage($userId, $imgId){
     $conn = $this->getConnection();
     $insertQuery = "INSERT INTO owned_img (user_id, img_id) VALUES (:userId, :imgId)";
+    $q = $conn->prepare($insertQuery);
+    $q->bindParam(":userId", $userId);
+    $q->bindParam(":imgId", $imgId);
+    $q->execute();
+  }
+
+  //Deletes the user and image id from the owned 
+  public function sellImage($userId, $imgId){
+    $conn = $this->getConnection();
+    $insertQuery = "DELETE FROM owned_img WHERE user_id = :userId AND img_id = :imgId";
     $q = $conn->prepare($insertQuery);
     $q->bindParam(":userId", $userId);
     $q->bindParam(":imgId", $imgId);
@@ -196,6 +215,26 @@ class Dao {
     $q->bindParam(":sub", $sub);
     $q->bindParam(":id", $userId);
     $q->execute();
+  }
+
+  //Increments the balance of the given user by the given amount
+  public function addBalance($userId, $add){
+    $conn = $this->getConnection();
+    $updateQuery = "UPDATE user SET balance = balance + :add WHERE user_id = :id";
+    $q = $conn->prepare($updateQuery);
+    $q->bindParam(":add", $add);
+    $q->bindParam(":id", $userId);
+    $q->execute();
+  }
+
+  public function isOwner($userId, $imgId){
+    $conn = $this->getConnection();
+    $selectQuery = "SELECT * FROM owned_img WHERE img_id = :imgId AND user_id = :userId";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":imgId", $imgId);
+    $q->bindParam(":userId", $userId);
+    $q->execute();
+    return $q->rowCount() > 0;
   }
 
 } // end Dao
