@@ -130,6 +130,7 @@ class Dao {
     $deleteQuery = "DELETE FROM image WHERE img_id = :id";
     $q = $conn->prepare($deleteQuery);
     $q->bindParam(":id", $id);
+    $q->execute();
   }
 
   public function getImgPath($id){
@@ -138,7 +139,7 @@ class Dao {
     $q = $conn->prepare($selectQuery);
     $q->bindParam(":id", $id);
     $q->execute();
-    return $q->fetchColumn(4);
+    return $q->fetchColumn(0);
   }
 
 } // end Dao
