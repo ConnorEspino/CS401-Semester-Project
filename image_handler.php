@@ -10,6 +10,8 @@
 
     if (count($_FILES) > 0) {
         if ($_FILES["img"]["error"] > 0) {
+            header('Location: mine.php');
+            exit;
         } else {
             $imagePath = "/images/" . uniqid() . ".png";
             if (!move_uploaded_file($_FILES["img"]["tmp_name"], getcwd() . $imagePath)) {
