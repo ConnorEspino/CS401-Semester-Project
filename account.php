@@ -19,25 +19,21 @@
             <h1>Your Purchases</h1>
             <div id="purchases">
                 <ol>
-                    <li>
-                        <div class="container">
-                            <a href="monkee.png"><img src="monkee.png">
-                                <div class="content">
-                                    <h1>Value: $6969</h1>
+                    <?php 
+                        $images = $dao->getAllOwnedImages($_SESSION['user_id']);
+
+                        foreach($images->fetchAll() as $img){
+                                echo '<li>
+                                <div class="container">
+                                    <a href="purchase.php?id=' . $img[0] . '"><img src="' . $img[4] . '">
+                                        <div class="content">
+                                            <h1>Price: $' . $img[2] .'</h1>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                    </li>
-                        
-                    <li>
-                        <div class="container">
-                            <a href="monkee2.png"><img src="monkee2.png">
-                                <div class="content">
-                                    <h1>Value: $6969</h1>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
+                            </li>';
+                        }
+                    ?>
                 </ol>
             </div>
         </div>

@@ -150,6 +150,15 @@ class Dao {
     return $conn->query('SELECT * FROM image ORDER BY price DESC;');
   }
 
+  //Returns an array of all images that the given user_id owns
+  public function getAllOwnedImages($id){
+    $conn = $this->getConnection();
+    return $conn->query('SELECT * 
+    FROM image 
+    RIGHT JOIN owned_img ON image.img_id = owned_img.img_id
+    ORDER BY price DESC;');
+  }
+
   //Returns the image with the given ID
   public function getImage($id){
     $conn = $this->getConnection();
@@ -160,6 +169,7 @@ class Dao {
     return $q->fetchObject();
   }
 
+  //Sets the status of an image to 1
   public function setImageStatusBought($id){
     $conn = $this->getConnection();
     $updateQuery = "UPDATE image SET status = 1 WHERE img_id = :id";
@@ -168,6 +178,7 @@ class Dao {
     $q->execute();
   }
 
+  //Inserts a new row into the owned_image table which sells the image
   public function buyImage($userId, $imgId){
     $conn = $this->getConnection();
     $insertQuery = "INSERT INTO owned_img (user_id, img_id) VALUES (:userId, :imgId)";
@@ -177,6 +188,7 @@ class Dao {
     $q->execute();
   }
 
+  //Decrements the balance of the given user by the given amount
   public function subtractBalance($userId, $sub){
     $conn = $this->getConnection();
     $updateQuery = "UPDATE user SET balance = balance - :sub WHERE user_id = :id";
