@@ -10,8 +10,12 @@ body{
 }
 
 #nav{
-    padding-left:0px;
     margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    padding-left: 5%;
 }
 
 #nav > li{
@@ -25,25 +29,23 @@ body{
     border-color: rgb(30, 203, 255);
 }
 
-#nav > li{
-    width: 85px;
-    height: 85px;
-    margin-left: 20px;
-    margin-right: 20px;
-    display: inline-block;
-    text-align:center;
-}
-
-#nav {
-    margin-left: auto;
-    padding-left: 5%;
-}
-
 #nav_bar > a{
     width: 85px;
     height: 85px;
     float: right;
     margin-left: auto;
+}
+
+#account{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#account > a{
+    font-family: "Futura PT Medium";
+    color: white;
+    margin: 0%;
 }
 
 hr{
