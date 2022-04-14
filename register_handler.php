@@ -10,7 +10,7 @@
     }
 
     $user = $_POST['username'];
-    $pass = $_POST['password'];
+    $pass = md5($_POST['password']);
 
     require_once 'Dao.php';
     $dao = new Dao();
@@ -30,7 +30,7 @@
     
 
     if(isset($_SESSION['register_messages'])){
-        header('Location: login.php');
+        header('Location: index.php');
         exit;
     }
     

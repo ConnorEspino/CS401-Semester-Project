@@ -12,7 +12,7 @@
                     <li><a href="leaderboard.php"><img src="Leaderboard.png"></a></li>
                 </ul>
             </div>
-            <div id="account">
+            <div id="account_header">
                 <a href="logout_handler.php">Log Out</a>
                 <a href="account.php"><img src="Account.png"></a>
                 

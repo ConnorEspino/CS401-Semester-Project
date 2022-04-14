@@ -8,7 +8,7 @@
             exit();
         }
 
-        if($_SESSION['user_id'] != 64){
+        if($_SESSION['user_id'] != 174){
             header('Location: index.php');
             exit();
         }

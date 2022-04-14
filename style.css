@@ -36,13 +36,13 @@ body{
     margin-left: auto;
 }
 
-#account{
+#account_header{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
 
-#account > a{
+#account_header > a{
     font-family: "Futura PT Medium";
     color: white;
     margin: 0%;

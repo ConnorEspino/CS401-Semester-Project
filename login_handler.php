@@ -10,7 +10,7 @@
     }
 
     $user = $_POST['username'];
-    $pass = $_POST['password'];
+    $pass = md5($_POST['password']);
 
     require_once 'Dao.php';
     $dao = new Dao();

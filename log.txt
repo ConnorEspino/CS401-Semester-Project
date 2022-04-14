@@ -3,3 +3,15 @@ now - INFO  --> Registering user: asd with password: asd
 now - INFO  --> Registering user: Henry with password:  
 now - INFO  --> Registering user: Howdy with password: Connor 
 now - INFO  --> Registering user: admin with password: ConnorEspino 
+now - INFO  --> Registering user: Amelia with password: cfcd208495d565ef66e7dff9f98764da 
+now - INFO  --> Registering user: admin with password: cfcd208495d565ef66e7dff9f98764da 
+now - INFO  --> Registering user: username with password: cfcd208495d565ef66e7dff9f98764da 
+now - INFO  --> Registering user: admin with password: cfcd208495d565ef66e7dff9f98764da 
+now - INFO  --> Registering user: Amelia with password: cfcd208495d565ef66e7dff9f98764da 
+now - INFO  --> Registering user: admin with password: cfcd208495d565ef66e7dff9f98764da 
+now - INFO  --> Registering user: Amelia with password: cfcd208495d565ef66e7dff9f98764da 
+now - INFO  --> Registering user: admin with password: cfcd208495d565ef66e7dff9f98764da 
+now - INFO  --> Registering user: Amelia with password: cfcd208495d565ef66e7dff9f98764da 
+now - INFO  --> Registering user: admin with password: cce82000bd87eef966c9036ad4d9a9aa 
+now - INFO  --> Registering user: Amelia with password: 4ca11a8d225a16796859be939a4af562 
+now - INFO  --> Registering user: username with password: 5f4dcc3b5aa765d61d8327deb882cf99 
