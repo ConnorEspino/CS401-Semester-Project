@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <?php 
         require_once 'header.php';
         session_start();
@@ -27,7 +27,7 @@
                         if($img[3] != 1){
                             echo '<li>
                             <div class="container">
-                                <a href="purchase.php?id=' . $img[0] . '"><img src="' . $img[4] . '">
+                                <a href="purchase.php?id=' . $img[0] . '"><img alt="' . $img[1] . '" src="' . $img[4] . '">
                                     <div class="content">
                                         <h1>Price: $' . $img[2] .'</h1>
                                     </div>

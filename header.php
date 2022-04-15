@@ -7,14 +7,14 @@
         <div id="nav_bar">
             <div id="nav">
                 <ul id="nav">
-                    <li><a href="mining.php"><img src="Mine.png"></a></li>
-                    <li><a href="market.php"><img src="Market.png"></a></li>
-                    <li><a href="leaderboard.php"><img src="Leaderboard.png"></a></li>
+                    <li><a for="Mining" href="mining.php"><img alt="Mining Page Icon" src="Mine.png"></a></li>
+                    <li><a for="Market" href="market.php"><img alt="Market Page Icon" src="Market.png"></a></li>
+                    <li><a for="Leaderboard" href="leaderboard.php"><img alt="Leaderboard Page Icon" src="Leaderboard.png"></a></li>
                 </ul>
             </div>
             <div id="account_header">
                 <a href="logout_handler.php">Log Out</a>
-                <a href="account.php"><img src="Account.png"></a>
+                <a for="Account" href="account.php"><img alt="Account Page Icon" src="Account.png"></a>
                 
             </div>
 
