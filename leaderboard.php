@@ -24,7 +24,6 @@
 
                 <?php
                     $count = 1;
-                    //TODO: work on validating usernames
                     $users = $dao->getUsers();
                     foreach($users->fetchAll() as $user){
                         echo '<tr>';
@@ -51,4 +50,7 @@
             </table>
         </div>
     </body>
+    <?php 
+        require_once 'footer.php';
+    ?>
 </html>
