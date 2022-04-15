@@ -51,8 +51,8 @@
             <div>
                 <form for="answer" action="mining_handler.php" method="POST">
                     <div id="mine_form">
-                        <input type="text" id="answer" name="answer" placeholder="Enter your answer...">
-                        <input type="submit" id="mine_button" value=" Enter ">
+                        <input for="Enter your answer" type="text" id="answer" name="answer" placeholder="Enter your answer...">
+                        <input for="Submit button" type="submit" id="mine_button" value=" Enter ">
                     </div>
                 </form>
             </div>
