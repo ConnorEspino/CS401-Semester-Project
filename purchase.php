@@ -14,13 +14,16 @@
             exit();
         }
 
-        if(!isset($_GET['id'])){
+        if(!isset($_GET['id']) || !is_numeric($_GET['id'])){
             header('Location: market.php');
             exit();
         }
 
         $imgId = $_GET['id'];
-        $img = $dao->getImage($imgId);
+        if(!($img = $dao->getImage($imgId))){
+            header('Location: market.php');
+            exit();
+        }
         $img = json_decode(json_encode($img), true);
     ?>
     
