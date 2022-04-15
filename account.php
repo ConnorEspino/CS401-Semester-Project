@@ -4,7 +4,7 @@
         require_once 'header.php';
 
         if(!isset($_SESSION['user_id'])){
-            $_SESSION['login_messages'] = " id=bad_message> Please login before browsing";
+            $_SESSION['login_messages'][] = " id=bad_message> Please login before browsing";
             header('Location: index.php');
             exit();
         }

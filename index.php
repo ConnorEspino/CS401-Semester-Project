@@ -37,6 +37,7 @@
 
         <div class="post_action_message">
             <?php 
+            
                 //Print out whatever message comes across from the handler
                 if(isset($_SESSION['register_messages'])){
                     foreach($_SESSION['register_messages'] as $message){

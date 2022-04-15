@@ -9,10 +9,11 @@
         $dao = new Dao();  
 
         if(!isset($_SESSION['user_id'])){
-            $_SESSION['login_messages'] = " id=bad_message> Please login before browsing";
+            $_SESSION['login_messages'][] = " id=bad_message> Please login before browsing";
             header('Location: index.php');
             exit();
         }
+
         if(!isset($_GET['id'])){
             header('Location: market.php');
             exit();
