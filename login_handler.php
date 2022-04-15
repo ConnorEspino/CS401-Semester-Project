@@ -10,7 +10,7 @@
     }
 
     $user = $_POST['username'];
-    $pass = md5($_POST['password'] + "sopfigjhergk");
+    $pass = $_POST['password'];
 
     require_once 'Dao.php';
     $dao = new Dao();
@@ -23,7 +23,7 @@
         $_SESSION['login_messages'][] = " id=bad_message> Please enter a password";
     }
 
-    if($user != NULL && $pass != NULL && !$dao->login($user, $pass)){
+    if($user != NULL && $pass != NULL && !$dao->login($user, $pass) && !password_verify($pass, $dao->getPassFromUser($user))){
         $_SESSION['login_messages'][] = " id=bad_message> Incorrect Login information, please try again";
     }
     

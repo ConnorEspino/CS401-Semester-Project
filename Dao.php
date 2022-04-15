@@ -86,6 +86,15 @@ class Dao {
     return $q->fetchColumn(0);
   }
 
+  public function getPassFromUser($user) {
+    $conn = $this->getConnection();
+    $selectQuery = "SELECT password FROM user WHERE username = :user";
+    $q = $conn->prepare($selectQuery);
+    $q->bindParam(":user", $user);
+    $q->execute();
+    return $q->fetchColumn(0);
+  }
+
   public function getBalance($id) {
     $conn = $this->getConnection();
     $selectQuery = "SELECT balance FROM user WHERE user_id = :id";

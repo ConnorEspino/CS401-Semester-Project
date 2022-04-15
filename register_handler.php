@@ -10,7 +10,7 @@
     }
 
     $user = $_POST['username'];
-    $pass = password_hash($_POST['password'] + "sopfigjhergk");
+    $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     require_once 'Dao.php';
     $dao = new Dao();
