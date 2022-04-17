@@ -49,7 +49,7 @@
             </h1>
 
             <div>
-                <form for="answer" action="mining_handler.php" method="POST">
+                <form for="answer" action="handlers/mining_handler.php" method="POST">
                     <div id="mine_form">
                         <input for="Enter your answer" type="text" id="answer" name="answer" placeholder="Enter your answer...">
                         <input for="Submit button" type="submit" id="mine_button" value=" Enter ">

@@ -3,12 +3,12 @@
 
     session_start();
 
-    require_once 'Dao.php';
+    require_once '../Dao.php';
     $dao = new Dao();  
 
     if(!isset($_SESSION['user_id'])){
         $_SESSION['login_messages'] = " id=bad_message> Please login before browsing";
-        header('Location: index.php');
+        header('Location: ../index.php');
         exit();
     }
 
@@ -17,7 +17,7 @@
     }
 
     if(!isset($_GET['id'])){
-        header('Location: market.php');
+        header('Location: ../market.php');
         exit();
     }
 
@@ -31,7 +31,7 @@
     }
 
     if(isset($_SESSION['purchase_messages'])){
-        header('Location: purchase.php?id=' . $imgId);
+        header('Location: ../purchase.php?id=' . $imgId);
         exit();
     }
 
@@ -42,6 +42,6 @@
 
     $_SESSION['purchase_messages'][] = ' id=good_message> Image sold successfully!';
 
-    header('Location: purchase.php?id=' . $imgId);
+    header('Location: ../purchase.php?id=' . $imgId);
     exit();
 ?>

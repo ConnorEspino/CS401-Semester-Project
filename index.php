@@ -13,7 +13,7 @@
     <body>
         <div id="login">
             
-            <form for="login" action="login_handler.php" method="POST">
+            <form for="login" action="handlers/login_handler.php" method="POST">
 
                 <div id="login_form">
                     <h1>Login</h1>
@@ -23,7 +23,7 @@
                 </div>
             </form>
 
-            <form for="register" action="register_handler.php" method="POST">
+            <form for="register" action="handlers/register_handler.php" method="POST">
 
                 <div id="login_form">
                     <h1>Register</h1>

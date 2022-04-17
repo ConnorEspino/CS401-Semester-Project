@@ -39,10 +39,10 @@
             </div>
 
             <div>
-                <form for="register" action="purchase_buy_handler.php?id=<?php echo $imgId ?>" method="POST">
+                <form for="register" action="handlers/purchase_buy_handler.php?id=<?php echo $imgId ?>" method="POST">
                         <input type="submit" id="purchase_button" value="Buy">
                 </form>
-                <form for="register" action="purchase_sell_handler.php?id=<?php echo $imgId ?>" method="POST">
+                <form for="register" action="handlers/purchase_sell_handler.php?id=<?php echo $imgId ?>" method="POST">
                         <input type="submit" id="purchase_button" value="Sell">
                 </form>
             </div>

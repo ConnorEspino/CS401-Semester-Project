@@ -4,7 +4,7 @@
     $price = $_POST['price'];
     $title = $_POST['title'];
 
-    require_once 'Dao.php';
+    require_once '../Dao.php';
     $dao = new Dao();
     
 
@@ -20,7 +20,7 @@
             
             $_SESSION['img_message'] = " id=good_message> Image added!";
 
-            header('Location: img_upload.php');
+            header('Location: ../img_upload.php');
             exit;
         }
     }

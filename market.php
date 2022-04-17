@@ -8,7 +8,7 @@
     ?>    
 
     <body>
-        <div id="sort">
+        <!-- <div id="sort">
             <label>
                 Sort by:
             </label>
@@ -17,7 +17,7 @@
                 <option value="PriceLH">Price (Low to High)</option> 
                 <option value="Most Recent">Most Recent</option>
             </select>
-        </div>
+        </div> -->
 
         <div id="marketplace">
             <ol>

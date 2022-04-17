@@ -17,7 +17,7 @@
     <body>
         <div>
             <h1>Image Upload</h1>
-            <form for="image" action="image_handler.php" method="POST" enctype="multipart/form-data">
+            <form for="image" action="handlers/image_handler.php" method="POST" enctype="multipart/form-data">
                 <div id="mine_form">
                     <input type="number" id="price" name="price" placeholder="Price">
                     <input type="text" id="title" name="title" placeholder="Title">
@@ -29,7 +29,7 @@
         <div>
             <h1>Image Delete</h1>
 
-            <form for="image" action="image_delete.php" method="POST">
+            <form for="image" action="handlers/image_delete.php" method="POST">
                 <div id="mine_form">
                     <input type="number" id="id" name="id" placeholder="Image Id">
                     <input type="submit" id="mine_button" value=" Enter ">

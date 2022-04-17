@@ -12,7 +12,7 @@
     $user = $_POST['username'];
     $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    require_once 'Dao.php';
+    require_once '../Dao.php';
     $dao = new Dao();
 
 
@@ -30,13 +30,13 @@
     
 
     if(isset($_SESSION['register_messages'])){
-        header('Location: index.php');
+        header('Location: ../index.php');
         exit;
     }
     
     $dao->registerUser($user, $pass);
     $_SESSION['mine_message'] = " id=good_message> Registered and signed in successfully!";
     $_SESSION['user_id'] = $dao->getId($user);
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit;
 ?>
