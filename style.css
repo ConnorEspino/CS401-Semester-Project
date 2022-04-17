@@ -211,12 +211,10 @@ hr{
 }
 
 #purchase > #purchase_img{
-    padding-left: 5%;
     padding-top: 5%;
 }
 
 #purchase_img > img{
-    max-width: 50%;
     max-height: 50%;
 }
 
