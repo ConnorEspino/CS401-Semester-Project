@@ -3,7 +3,7 @@
 
     $id = $_POST['id'];
 
-    require_once '../Dao.php';
+    require_once 'Dao.php';
     $dao = new Dao();
     
 
@@ -17,6 +17,6 @@
     
     $_SESSION['img_message'] = " id=good_message> Image #" . $id . " deleted!";
 
-    header('Location: ../img_upload.php');
+    header('Location: img_upload.php');
     exit;
 ?>
