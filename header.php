@@ -2,6 +2,9 @@
     <head>
         <title>NFT Black Market</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
         <link rel="icon" type="image/x-icon" href="header_images/favicon.png">
         <script type="text/javascript" src="jquery-3.6.0.min.js"> </script>
         <script src="js/message.js"></script>
