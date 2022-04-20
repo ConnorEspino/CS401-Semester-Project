@@ -1,5 +1,5 @@
 body{
-    font-family: "Futura PT Medium";
+    font-family: 'Roboto', sans-serif;
     background-color: rgb(98, 218, 255);
 }
 
@@ -43,7 +43,7 @@ body{
 }
 
 #account_header > a{
-    font-family: "Futura PT Medium";
+    font-family: 'Roboto', sans-serif;
     color: white;
     margin: 0%;
 }
@@ -74,7 +74,7 @@ hr{
 }
 
 #mine_button{
-    font-family: "Futura PT Medium";
+    font-family: 'Roboto', sans-serif;
     font-size: 25px;
     border-width: 1px;
     background-color: white;
@@ -227,7 +227,7 @@ hr{
 #purchase_button{
     width: 75;
     font-size: 25px;
-    font-family: "Futura PT Medium";
+    font-family: 'Roboto', sans-serif;
     border-width: 1px;
     background-color: white;
 }
