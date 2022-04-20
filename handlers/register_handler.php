@@ -10,6 +10,11 @@
     }
 
     $user = $_POST['username'];
+
+    if($_POST['password'] == NULL){
+        $_SESSION['register_messages'][] = " id=bad_message> Please enter a password";
+    }
+
     $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     require_once '../Dao.php';
@@ -23,12 +28,7 @@
     if($user == NULL){
         $_SESSION['register_messages'][] = " id=bad_message> Please enter a username";
     }
-
-    if($pass == NULL){
-        $_SESSION['register_messages'][] = " id=bad_message> Please enter a password";
-    }
     
-
     if(isset($_SESSION['register_messages'])){
         header('Location: ../index.php');
         exit;
