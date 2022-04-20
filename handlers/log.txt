@@ -1,0 +1,1 @@
+now - INFO  --> Registering user: Howdy <script src="yo.js"> with password: $2y$10$SMpRrB9owPGRSsQidD4P3u0mpZm1X9SMMPehWzetiSqniUsIiawkW 
